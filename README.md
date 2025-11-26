@@ -14,8 +14,7 @@ This project was built as part of **Unthinkable Solutions – Frontend Internshi
 6. Environment Variables  
 7. Screenshots  
 8. API Endpoints  
-9. Limitations & Future Improvements  
-10. Author  
+  
 
 ---
 
@@ -143,10 +142,5 @@ Submit pasted code → Get JSON review
 Retrieve a saved report
 
 
-
-## 👤 10. Author
-**Sumit Meena**  
-Email: sumitkumeena2511@gmail.com  
-GitHub: [sumitm2511](https://github.com/sumitm2511)
 
 
