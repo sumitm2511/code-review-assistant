@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css additions: nicer font & subtle UI polish */
+@layer base {
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optional: use system UI stack for a modern look */
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                 Roboto, "Helvetica Neue", "Noto Sans", "Arial", "Apple Color Emoji",
+                 "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}
+
+/* card subtle background */
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  backdrop-filter: blur(6px);
+}
+
+.dark .card-glass {
+  background: linear-gradient(180deg, rgba(10,10,10,0.6), rgba(10,10,10,0.45));
+}
+
+body { @apply bg-gray-50; }
+/* src/index.css additions */
+.CodeMirror { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
+.cm-editor { /* ensure editor background blends */ }
