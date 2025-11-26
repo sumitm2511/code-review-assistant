@@ -23,6 +23,8 @@ router.get('/list', (req, res) => {
     return res.json({ reports: [] });
   }
 
+  const BASE_URL = process.env.SERVER_URL || "https://code-review-backend-4ohe.onrender.com";
+
   const files = fs.readdirSync(reportsDir)
     .filter(f => f.endsWith('.json'))
     .map(f => {
@@ -32,11 +34,12 @@ router.get('/list', (req, res) => {
       return {
         filename: data.filename,
         created_at: data.created_at,
-        path: `http://localhost:4000/reports/${f}`
+        path: `${BASE_URL}/reports/${f}`
       };
     });
 
   res.json({ reports: files });
 });
+
 
 module.exports = router;
